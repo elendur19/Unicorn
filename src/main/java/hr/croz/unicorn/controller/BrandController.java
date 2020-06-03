@@ -32,7 +32,7 @@ public class BrandController {
     }
 
     @PostMapping
-    public ResponseEntity<Brand> saveNewCar(@RequestBody Brand brand) {
+    public ResponseEntity<Brand> saveNewBrand(@RequestBody Brand brand) {
         try {
             return ResponseEntity.ok().body(brandService.save(brand));
         } catch (Exception e) {

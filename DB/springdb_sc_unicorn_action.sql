@@ -1,0 +1,3 @@
+INSERT INTO sc_unicorn.action (id, beginning, "end", action_percentage) VALUES (1, '2019-11-21 00:00:00.000000', '2020-05-06 00:00:00.001000', 20);
+INSERT INTO sc_unicorn.action (id, beginning, "end", action_percentage) VALUES (2, '2018-01-01 00:00:00.002000', '2018-01-04 11:46:55.632000', 50);
+INSERT INTO sc_unicorn.action (id, beginning, "end", action_percentage) VALUES (3, '2019-01-01 00:00:00.002000', '2019-06-03 11:47:56.231000', 10);

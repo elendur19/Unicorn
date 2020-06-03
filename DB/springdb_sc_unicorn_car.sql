@@ -1,0 +1,11 @@
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (2, 'AudiA3', null);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (3, 'VW GolfVII', null);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (4, 'VW GolfVI', 2);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (1, 'AudiA5', 1);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (5, 'Volvo E60', null);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (6, 'Toyota Yaris', null);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (7, 'Fiat', null);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (8, 'Fiat', null);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (9, 'Audi A6', null);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (10, 'Audi A6', null);
+INSERT INTO sc_unicorn.car (id, name, brand_id) VALUES (11, 'Audi A7', 2);

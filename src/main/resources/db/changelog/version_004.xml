@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="4" author="mislavr">
+        <createTable tableName="action" schemaName="sc_unicorn">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="beginning" type="timestamp"/>
+            <column name="end" type="timestamp"/>
+            <column name="action_percentage" type="int"/>
+        </createTable>
+
+        <createTable tableName="article" schemaName="sc_unicorn">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="base_price" type="decimal"/>
+            <column name="serial_number" type="varchar(32)">
+                <constraints foreignKeyName="FK_PART_SERIAL_NUMBER" referencedTableName="part"
+                             referencedColumnNames="serial_number"/>
+            </column>
+            <column name="action_id" type="bigint">
+                <constraints foreignKeyName="FK_ACTION_ID" referencedTableName="action"
+                             referencedColumnNames="id"/>
+            </column>
+        </createTable>
+
+        <comment>Initial car and brand tables</comment>
+    </changeSet>
+</databaseChangeLog>
