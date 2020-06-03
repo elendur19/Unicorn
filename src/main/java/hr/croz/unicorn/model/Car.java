@@ -16,8 +16,11 @@ public class Car {
     @Column(name = "name")
     private String name;
 
-    @JoinColumn(name = "brand_id")
-    @ManyToOne(targetEntity = Brand.class, fetch = FetchType.LAZY)
+    @Column(name = "brand_id")
+    private Long brandId;
+
+    @JoinColumn(name = "brand_id", insertable = false, updatable = false)
+    @ManyToOne
     private Brand brand;
 
 }

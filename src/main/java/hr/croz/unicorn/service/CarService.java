@@ -6,4 +6,5 @@ import org.springframework.stereotype.Service;
 
 public interface CarService extends CRUDService<Car, Long> {
 
+    Car findCarByBrandAndCarName(String brandAndCarName);
 }

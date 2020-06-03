@@ -1,19 +1,22 @@
 package hr.croz.unicorn.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "car_part", schema = "sc_unicorn")
+@Data
 public class CarParts {
 
     @Id
-    Long id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "car_id")
-    Car car;
+    private Car car;
 
     @ManyToOne
     @JoinColumn(name = "part_id")
-    Part part;
+    private Part part;
 }

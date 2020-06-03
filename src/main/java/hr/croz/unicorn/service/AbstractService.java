@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class AbstractService<T, U> implements CRUDService<T, U> {
-    private JpaRepository<T, U> repository;
+    private final JpaRepository<T, U> repository;
 
     public AbstractService(JpaRepository<T, U> repository) {
         this.repository = repository;

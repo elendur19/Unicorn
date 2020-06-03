@@ -38,4 +38,14 @@ public class CarController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+    @GetMapping(path="/name/{brandAndCarName}")
+    public ResponseEntity<Car> getByBrandAndCarName(@PathVariable("brandAndCarName") String brandAndCarName) {
+        try {
+            return ResponseEntity.ok().body(carService.findCarByBrandAndCarName(brandAndCarName));
+        } catch (Exception e) {
+            log.error("getByBrandAndCarName...Error while getting car by name", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 }
